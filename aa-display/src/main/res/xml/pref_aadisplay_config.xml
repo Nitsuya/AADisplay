@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:key="CategoryBase"
+        app:title="基础配置"
+        app:iconSpaceReserved="false">
+
+        <rikka.material.preference.MaterialSwitchPreference
+            app:defaultValue="true"
+            app:key="AutoOpen"
+            app:title="自动打开"
+            app:summary="连接Android Auto后自动打开应用"
+            app:iconSpaceReserved="false"/>
+
+        <EditTextPreference
+            android:inputType="text"
+            app:singleLineTitle="true"
+            app:defaultValue="com.wow.carlauncher.mini"
+            app:key="LauncherPackage"
+            app:title="首选项包名"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false"/>
+
+        <EditTextPreference
+            android:inputType="number"
+            app:key="AndroidAutoDpi"
+            app:title="AndroidAutoDpi"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+
+        <EditTextPreference
+            android:inputType="number"
+            app:key="VirtualDisplayDpi"
+            app:title="VirtualDisplayDpi"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+
+        <EditTextPreference
+            android:inputType="number"
+            app:defaultValue="180"
+            app:key="DelayDestroyTime"
+            app:title="延迟销毁时间"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+
+        <rikka.material.preference.MaterialSwitchPreference
+            app:defaultValue="false"
+            app:key="ScreenOffReplaceLockScreen"
+            app:title="仅熄屏"
+            app:summary="电源键替换仅熄屏"
+            app:iconSpaceReserved="false"/>
+
+        <rikka.material.preference.MaterialSwitchPreference
+            app:defaultValue="true"
+            app:key="CloseLauncherDashboard"
+            app:title="阻止AA分屏切换"
+            app:summary=""
+            app:iconSpaceReserved="false"/>
+
+        <ListPreference
+            app:key="DisplayImePolicy"
+            app:defaultValue="1"
+            app:title="ImePolicy"
+            app:entries="@array/ime_policy_keys"
+            app:entryValues="@array/ime_policy_values"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false"/>
+
+        <EditTextPreference
+            android:inputType="text"
+            app:singleLineTitle="true"
+            app:defaultValue="am start com.miui.voiceassist/com.xiaomi.voiceassistant.CTAAlertActivity"
+            app:key="VoiceAssistShell"
+            app:title="语音助手Shell"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="CategoryShell"
+        app:title="Shell命令"
+        app:iconSpaceReserved="false">
+
+        <EditTextPreference
+            android:inputType="textMultiLine"
+            app:key="CreateVirtualDisplayBefore"
+            app:title="创建虚拟屏前执行"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false"/>
+
+        <EditTextPreference
+            android:inputType="textMultiLine"
+            app:key="DestroyVirtualDisplayAfter"
+            app:title="销毁虚拟屏后执行"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="CategoryPhysicalBtn"
+        app:title="实体按钮"
+        app:summary="TODO"
+        app:iconSpaceReserved="false">
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="CategoryAndroidAuto"
+        app:title="AndroidAuto配置"
+        app:summary="[com.google.android."
+        app:singleLineTitle="true"
+        app:iconSpaceReserved="false">
+
+        <EditTextPreference
+            android:inputType="textMultiLine"
+            app:key="ComGoogleAndroidProjectionGearheadProps"
+            app:title="projection.gearhead] properties"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false"/>
+
+        <EditTextPreference
+            android:inputType="textMultiLine"
+            app:key="ComGoogleAndroidGmsCarProps"
+            app:title="gms.car] properties"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false"/>
+
+    </PreferenceCategory>
+
+<!--
+    <PreferenceCategory
+        app:key="CategoryLauncherMode"
+        app:title="启动模式"
+        app:summary="support mode: ucar,samsung,vivo,huawei"
+        app:singleLineTitle="true"
+        app:iconSpaceReserved="false">
+
+        <EditTextPreference
+            android:inputType="textMultiLine"
+            app:key="LauncherModeProps"
+            app:title="配置"
+            app:defaultValue="com.baidu.BaiduMap=samsung\ncom.autonavi.minimap=ucar\ncom.kugou.android=huawei"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false"/>
+
+    </PreferenceCategory>
+-->
+
+</PreferenceScreen>

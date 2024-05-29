@@ -1,0 +1,17 @@
+<resources>
+    <item name="container" type="id" />
+    <item name="filler" type="id" />
+    <item name="icon" type="id" />
+    <item name="icon_container" type="id" />
+    <item name="max_width_layout" type="id" />
+    <item name="title" type="id" />
+    <item name="text_container" type="id" />
+    <item name="text" type="id" />
+    <item name="right_icon" type="id" />
+    <item name="paged_scroll_view" type="id" />
+    <item name="page_up" type="id" />
+    <item name="page_down" type="id" />
+    <item name="recycler_view" type="id" />
+    <item name="scrollbar_thumb" type="id" />
+
+</resources>

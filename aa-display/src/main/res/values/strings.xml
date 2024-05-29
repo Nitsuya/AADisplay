@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AADisplay</string>
+    <string name="unknown_error">unknown error</string>
+    <string name="details">details</string>
+    <string name="settings">settings</string>
+    <string name="xposeddescription">AADisplay</string>
+    <string name="info_system_version">System Version</string>
+    <string name="info_root_privilege">Root Privilege</string>
+    <string name="activated">Activated</string>
+    <string name="need_reboot">Need Reboot</string>
+    <string name="need_LSPosed">Need LSPosed</string>
+    <string name="not_activated">Not Activated</string>
+    <string name="reboot">Reboot</string>
+</resources>

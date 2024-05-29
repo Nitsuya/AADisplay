@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B3000000">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_recent_task_left"
+        android:name="io.github.nitsuya.aa.display.ui.aa.fragment.AaRecentTaskFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        app:layoutManager="LinearLayoutManager"
+        tools:context=".ui.aa.fragment.AaRecentTaskFragment"
+        tools:listitem="@layout/recent_task" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="?colorOnPrimaryContainer"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_recent_task_right"
+        android:name="io.github.nitsuya.aa.display.ui.aa.fragment.AaRecentTaskFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        app:layoutManager="LinearLayoutManager"
+        tools:context=".ui.aa.fragment.AaRecentTaskFragment"
+        tools:listitem="@layout/recent_task" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+

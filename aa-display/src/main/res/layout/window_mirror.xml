@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4D000000"
+        android:fitsSystemWindows="false">
+
+        <View
+            android:id="@+id/v_height_umbrella1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/cv_app"
+            android:visibility="visible"
+            tools:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_recent_task"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/cv_app"
+            android:background="#59000000"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_recent_task_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:layoutManager="LinearLayoutManager"
+                tools:context=".ui.aa.fragment.AaRecentTaskFragment"
+                tools:listitem="@layout/recent_task" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="?colorOnPrimaryContainer"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_recent_task_right"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:layoutManager="LinearLayoutManager"
+                tools:context=".ui.aa.fragment.AaRecentTaskFragment"
+                tools:listitem="@layout/recent_task" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/v_height_umbrella2"
+            style="@style/Widget.Material3.CardView.Elevated"
+            app:cardBackgroundColor="?colorPrimaryContainer"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <SurfaceView
+                    android:id="@+id/sv_mirror"
+                    android:layout_width="match_parent"
+                    android:layout_height="480px" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sv_mirror"
+                    android:layout_alignEnd="@id/sv_mirror"
+                    android:layout_alignParentStart="true"
+                    android:alpha="0.8">
+
+                    <ImageButton
+                        android:id="@+id/ib_back"
+                        android:layout_width="@dimen/notification_large_icon_width"
+                        android:layout_height="@dimen/notification_large_icon_height"
+                        android:layout_toStartOf="@id/ib_home"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_arrow_back_24"
+                        app:tint="?colorOnPrimaryContainer" />
+
+                    <ImageButton
+                        android:id="@+id/ib_home"
+                        android:layout_width="@dimen/notification_large_icon_width"
+                        android:layout_height="@dimen/notification_large_icon_height"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_centerInParent="true"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_home_24"
+                        app:tint="?colorOnPrimaryContainer" />
+
+                    <ImageButton
+                        android:id="@+id/ib_recent_task"
+                        android:layout_width="@dimen/notification_large_icon_width"
+                        android:layout_height="@dimen/notification_large_icon_height"
+                        android:layout_toEndOf="@id/ib_home"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_fullscreen_24"
+                        app:tint="?colorOnPrimaryContainer" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:id="@+id/v_height_umbrella2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+</RelativeLayout>

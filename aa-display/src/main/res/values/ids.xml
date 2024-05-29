@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="is_drag" type="id" />
+    <item name="drag_last_x" type="id" />
+    <item name="drag_last_y" type="id" />
+    <item name="drag_distance" type="id" />
+    <item name="tap_count" type="id" />
+    <item name="ori_click_listener" type="id" />
+    <item name="ori_long_click_listener" type="id" />
+</resources>

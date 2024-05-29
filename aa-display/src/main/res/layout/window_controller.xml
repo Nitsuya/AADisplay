@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4D000000"
+        app:cardBackgroundColor="?colorPrimaryContainer"
+        app:strokeColor="?colorOutline"
+        app:strokeWidth="2dp"
+        app:cardCornerRadius="25dp"
+        style="@style/Widget.Material3.CardView.Elevated">
+
+        <ImageButton
+            android:id="@+id/ib_expand"
+            android:layout_width="@dimen/notification_large_icon_width"
+            android:layout_height="@dimen/notification_large_icon_height"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_fullscreen_24"
+            android:layout_margin="4dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/ib_extinguish"
+                android:layout_width="@dimen/notification_large_icon_width"
+                android:layout_height="@dimen/notification_large_icon_height"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_power_settings_new_24"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <ImageButton
+                android:id="@+id/ib_disconnect_type"
+                android:layout_width="@dimen/notification_large_icon_width"
+                android:layout_height="@dimen/notification_large_icon_height"
+                android:layout_marginTop="4dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_motion_photos_auto_24"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <Button
+                android:id="@+id/tv_destroy_time"
+                android:layout_width="@dimen/notification_large_icon_width"
+                android:layout_height="@dimen/notification_large_icon_height"
+                android:layout_marginTop="4dp"
+                android:singleLine="true"
+                android:padding="0dp"
+                android:text="110s"
+                android:textSize="@dimen/notification_action_text_size"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="?colorOnPrimaryContainer"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <ImageButton
+                android:id="@+id/ib_exit_display"
+                android:layout_width="@dimen/notification_large_icon_width"
+                android:layout_height="@dimen/notification_large_icon_height"
+                android:layout_marginTop="4dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_exit_to_app_24"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <ImageButton
+                android:id="@+id/ib_mirror_display"
+                android:layout_width="@dimen/notification_large_icon_width"
+                android:layout_height="@dimen/notification_large_icon_height"
+                android:layout_marginTop="4dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_monitor_24"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>
