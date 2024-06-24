@@ -120,27 +120,8 @@ object AaUiHook: AaHook() {
     override fun hook(config: SharedPreferences, lpparam: XC_LoadPackage.LoadPackageParam) {
         hookBaseClick()
         hookLayout()
-        hookFacetBar(config, lpparam)
-        hookRadius()
-
-        try{
-            findMethod("onc") {
-                name == "aT"
-            }.hookAfter { param ->
-                try{
-                    log(tagName, "CarSystemUiControllerService -> onc.aT check: ${param.result}")
-                    var intent = param.args[0] as Intent
-                    log(tagName, "CarSystemUiControllerService -> onc.aT Intent: $intent")
-                    if(intent.extras != null)  {
-                        log(tagName, "CarSystemUiControllerService -> onc.aT Intent Extras: ${printBundle(intent.extras!!, 0)}")
-                    }
-                } catch (e: Throwable) {
-                    log(tagName, "CarSystemUiControllerService -> onc.aT log.error", e)
-                }
-            }
-        } catch (e: Throwable) {
-            log(tagName, "CarSystemUiControllerService -> onc.aT error", e)
-        }
+        hookFacetBar(config)
+        hookRadius(config)
     }
 
     private fun printBundle(extras: Bundle, index: Int): String{
@@ -169,7 +150,7 @@ object AaUiHook: AaHook() {
         }
     }
 
-    private fun hookFacetBar(config: SharedPreferences, lpparam: XC_LoadPackage.LoadPackageParam) {
+    private fun hookFacetBar(config: SharedPreferences) {
         val enableDefVoiceAssist = AADisplayConfig.VoiceAssistShell.get(config).isNullOrBlank()
         val closeLauncherDashboard = AADisplayConfig.CloseLauncherDashboard.get(config)
         val autoOpen = AADisplayConfig.AutoOpen.get(config)
@@ -376,7 +357,10 @@ object AaUiHook: AaHook() {
         }
     }
 
-    private fun hookRadius() {
+    private fun hookRadius(config: SharedPreferences) {
+        if(!AADisplayConfig.ForceRightAngle.get(config)){
+            return
+        }
         try{
             findConstructor("com.google.android.gms.car.ProjectionWindowDecorationParams"){
                 parameterCount == 9

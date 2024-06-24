@@ -21,7 +21,6 @@ fun CarFirstPartyManager?.startCarAaDisplay() {
         Intent().apply {
             component = ComponentName(BuildConfig.APPLICATION_ID, AaActivityService::class.java.name)
             putExtra("android.intent.extra.PACKAGE_NAME", BuildConfig.APPLICATION_ID)
-            //flags = Intent.FLAG_ACTIVITY_NEW_TASK
         }
     )
 }

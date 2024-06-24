@@ -59,6 +59,13 @@
             app:summary=""
             app:iconSpaceReserved="false"/>
 
+        <rikka.material.preference.MaterialSwitchPreference
+            app:defaultValue="true"
+            app:key="ForceRightAngle"
+            app:title="强制直角"
+            app:summary=""
+            app:iconSpaceReserved="false"/>
+
         <ListPreference
             app:key="DisplayImePolicy"
             app:defaultValue="1"

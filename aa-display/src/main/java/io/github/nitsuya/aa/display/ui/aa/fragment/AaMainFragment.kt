@@ -110,7 +110,7 @@ class AaMainFragment : BaseFragment<FragmentAaMainBinding>(FragmentAaMainBinding
                         1 -> {
                             when(action){
                                 KeyEvent.KEYCODE_SEARCH              /* 84*/ -> startVoiceAssist()
-                                KeyEvent.KEYCODE_MEDIA_REWIND         /* 89*/ -> CoreApi.toggleDisplayPower()
+                                KeyEvent.KEYCODE_MEDIA_REWIND         /* 89*/ -> CoreApi.startLauncher()
                                 KeyEvent.KEYCODE_MEDIA_FAST_FORWARD   /* 90*/ -> CoreApi.moveSecondTaskToFront()
                                 else -> CoreApi.toast("方控长按[$action]未设置")
                             }

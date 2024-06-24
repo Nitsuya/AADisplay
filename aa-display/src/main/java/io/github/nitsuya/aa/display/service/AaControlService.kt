@@ -20,7 +20,6 @@ import android.support.v4.media.session.PlaybackStateCompat
 import androidx.core.content.IntentCompat
 import androidx.media.MediaBrowserServiceCompat
 import androidx.media.session.MediaButtonReceiver
-import com.github.kyuubiran.ezxhelper.utils.field
 import com.google.android.apps.auto.sdk.nav.state.TurnEvent
 import io.github.nitsuya.aa.display.CoreApi
 import io.github.nitsuya.aa.display.R
@@ -31,7 +30,7 @@ import io.github.nitsuya.template.bases.runIO
 import io.github.nitsuya.template.bases.runMain
 import kotlinx.coroutines.delay
 
-
+@Deprecated("遗留代码")
 class AaControlService: MediaBrowserServiceCompat() {
     companion object {
         const val TAG = "AaControlService"

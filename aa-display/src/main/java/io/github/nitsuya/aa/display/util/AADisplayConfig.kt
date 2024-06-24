@@ -20,6 +20,7 @@ sealed class AADisplayConfig<T>(val key: String) {
     object DelayDestroyTime: IntConfig("DelayDestroyTime", 180)
     object ScreenOffReplaceLockScreen: BooleanConfig("ScreenOffReplaceLockScreen", true)
     object CloseLauncherDashboard: BooleanConfig("CloseLauncherDashboard", true)
+    object ForceRightAngle: BooleanConfig("ForceRightAngle", true)
     object DisplayImePolicy: IntConfig("DisplayImePolicy", 1) //WindowManager.DISPLAY_IME_POLICY_LOCAL:0, WindowManager.DISPLAY_IME_POLICY_FALLBACK_DISPLAY:1
     object VoiceAssistShell: StringConfig("VoiceAssistShell", null)
     object CreateVirtualDisplayBefore: ArrayStringConfig("CreateVirtualDisplayBefore")
