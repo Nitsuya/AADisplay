@@ -25,7 +25,7 @@ class XposedInit : IXposedHookZygoteInit, IXposedHookLoadPackage{
     override fun handleLoadPackage(lpparam: XC_LoadPackage.LoadPackageParam) {
         val packageName = lpparam.packageName
         when{
-            packageName == "android" -> arrayOf(AndroidHook)
+            packageName == "android" && lpparam.appInfo == null -> arrayOf(AndroidHook)
             packageName == "com.google.android.projection.gearhead" -> arrayOf(AndroidAuoHook)
             packageName == BuildConfig.APPLICATION_ID || lpparam.appInfo == null || lpparam.appInfo.uid == 1000 -> null
             //packageName == AADisplayConfig.LauncherPackage.get(CoreManagerService.config) -> arrayOf(LauncherHook)

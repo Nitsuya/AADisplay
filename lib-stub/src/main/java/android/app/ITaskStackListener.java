@@ -34,6 +34,12 @@ public interface ITaskStackListener extends IInterface {
     void onActivityRotation(int displayId) throws RemoteException;
     void onTaskMovedToBack(ActivityManager.RunningTaskInfo taskInfo) throws RemoteException;
     void onLockTaskModeChanged(int mode) throws RemoteException;
+
+    //Samsung OneUi
+    void onActivityDismissingSplitTask(String str) throws RemoteException;
+    void onOccludeChangeNotice(ComponentName componentName, boolean z) throws RemoteException;
+    void onTaskWindowingModeChanged(int i) throws RemoteException;
+
     abstract class Stub extends Binder implements ITaskStackListener {
 
         public static IDisplayManager asInterface(IBinder binder) {
