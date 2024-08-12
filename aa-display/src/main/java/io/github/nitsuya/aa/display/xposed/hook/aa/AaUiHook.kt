@@ -274,7 +274,9 @@ object AaUiHook: AaHook() {
             )
             arrayListOf(resIdStatusBarId, resIdLauncherAndDashboardIconContainerId, resIdAssistantIconContainerId).forEach { vId ->
                 val view = resultViewGroup.findViewById<View>(vId)
-                resultViewGroup.removeView(view)
+                (view.parent as ViewGroup?)?.apply {
+                    removeView(view)
+                }
                 aaFacetBar.addView(view)
             }
 //            val statusBarOverlayId = View(ctx).run {
