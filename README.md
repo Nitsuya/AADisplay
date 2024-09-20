@@ -33,8 +33,10 @@
 ## 用爱发电
 [捐赠 Donation](https://afdian.com/a/nitsuya)
 
-- [Eclair234](https://github.com/Eclair234) 350 CNY
-- 狐仙 25 CNY
+CNY:
+- [Eclair234](https://github.com/Eclair234) 350
+- 狐仙 25
+- 匿名 20
 
 ## Thanks
 
