@@ -34,6 +34,7 @@
 [捐赠 Donation](https://afdian.com/a/nitsuya)
 
 - [Eclair234](https://github.com/Eclair234) 350 CNY
+- 狐仙 25 CNY
 
 ## Thanks
 
