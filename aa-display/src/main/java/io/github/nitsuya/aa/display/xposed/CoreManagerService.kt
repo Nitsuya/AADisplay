@@ -149,7 +149,7 @@ class CoreManagerService private constructor(): ICoreManager.Stub() {
                     listener.onAvailableDisplay(displayId, true)
                 }
                 mDisplayWindow?.onDestroyPromptly()
-                mDisplayWindow = DisplayWindow(CommonContextWrapper.createAppCompatContext(systemContext), this, width, height)
+                mDisplayWindow = DisplayWindow(CommonContextWrapper.createAppCompatContext(systemContext), this, width, height, densityDpi)
             }
         }
     }

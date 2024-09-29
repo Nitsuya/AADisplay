@@ -14,8 +14,8 @@ android {
         applicationId = "io.github.nitsuya.aa.display"
         minSdk = 31
         targetSdk = 33
-        versionCode = 1500
-        versionName = "0.15#12.4+"
+        versionCode = 1600
+        versionName = "0.16#12.8+"
         buildConfigField("long", "BUILD_TIME", buildTime.toString())
     }
 
@@ -30,9 +30,9 @@ android {
     signingConfigs {
         create("release") {
             storeFile = file("../key.jks")
-            storePassword = System.getenv("KEY_AAD")
+            storePassword = System.getenv("KEY_ANDROID")
             keyAlias = "key0"
-            keyPassword = System.getenv("KEY_AAD")
+            keyPassword = System.getenv("KEY_ANDROID")
             enableV1Signing = false
             enableV2Signing = false
             enableV3Signing = true

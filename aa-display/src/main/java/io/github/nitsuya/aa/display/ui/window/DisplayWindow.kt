@@ -41,6 +41,7 @@ class DisplayWindow(
     , private val displayAdapter: AaVirtualDisplayAdapter
     , private var mDisplayWidth: Int
     , private var mDisplayHeight: Int
+    , private var mDensityDpi: Int
 ): View.OnTouchListener {
     companion object {
         private const val TAG = "AADisplay_DisplayWindow"
@@ -224,6 +225,7 @@ class DisplayWindow(
                     }
                 }
             }
+            tvVirtualDisplayInfo.text = "$mDisplayWidth*$mDisplayHeight,$mDensityDpi"
             rvRecentTaskLeft.apply {
                 layoutManager = LinearLayoutManager(context)
                 adapter = DisplayRecyclerViewAdapter(this) {

@@ -116,6 +116,14 @@
                         android:padding="4dp"
                         android:src="@drawable/ic_fullscreen_24"
                         app:tint="?colorOnPrimaryContainer" />
+
+                    <TextView
+                        android:id="@+id/tv_virtual_display_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="800*480,160"
+                        />
                 </RelativeLayout>
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
