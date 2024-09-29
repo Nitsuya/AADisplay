@@ -70,8 +70,9 @@ object AaDpiHook: AaHook() {
             && parameterTypes[3] == Point::class.java               //displayDimensions
             && parameterTypes[4] == Rect::class.java                //stableInsets
             && parameterTypes[5] == Rect::class.java                //contentInsets
-            && parameterTypes[6] == Int::class.javaPrimitiveType    //initialContentType UNKNOWN-0,NAVIGATION-1,TURN_CARD-2
-            && parameterTypes[7] == String::class.java              //configurationId
+            && parameterTypes[6] == List::class.java                //Type? cutouts
+            && parameterTypes[7] == Int::class.javaPrimitiveType    //initialContentType UNKNOWN-0,NAVIGATION-1,TURN_CARD-2
+            && parameterTypes[8] == String::class.java              //configurationId
         }
     }
 

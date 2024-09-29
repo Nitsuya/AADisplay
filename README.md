@@ -7,7 +7,7 @@
 ![Android SDK min 31](https://img.shields.io/badge/Android%20SDK-%3E%3D%2031-brightgreen?logo=android)
 ![Android SDK target 33](https://img.shields.io/badge/Android%20SDK-target%2033-brightgreen?logo=android)
 
-让Android Auto显示任意应用, 基于VirtualDisplay的套娃方案, Star! Star! Star! 
+让Android Auto显示任意应用, 基于VirtualDisplay的套娃方案, Star! Star! Star!
 
 仅支持A12+, 需LSPosed, 部分ROM可能存在崩的可能性, 请自备救机的常识.
 
