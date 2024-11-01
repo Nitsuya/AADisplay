@@ -35,7 +35,8 @@
 
 CNY:
 - [Eclair234](https://github.com/Eclair234) 350
-- 狐仙 25
+- 守望先锋真难玩(酷安) 50
+- 狐仙(Q) 25
 - 匿名 20
 
 ## Thanks
