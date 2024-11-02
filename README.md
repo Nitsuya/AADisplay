@@ -37,8 +37,8 @@ Please do not post any AADisplay tutorial-related videos and pictures in public 
 
 CNY:
 - [Eclair234](https://github.com/Eclair234) 350
-- 守望先锋真难玩(酷安) 50
-- 狐仙(Q) 25
+- 守望先锋真难玩(某安) 50
+- 狐仙(某Q) 25
 - 匿名 20
 
 ## Thanks
