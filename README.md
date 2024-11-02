@@ -7,7 +7,7 @@
 ![Android SDK min 31](https://img.shields.io/badge/Android%20SDK-%3E%3D%2031-brightgreen?logo=android)
 ![Android SDK target 33](https://img.shields.io/badge/Android%20SDK-target%2033-brightgreen?logo=android)
 
-Please do not post any videos and pictures of AADisplay, otherwise I will stop updating in regions other than China.
+Please do not post any AADisplay tutorial-related videos and pictures in public places, otherwise I will stop updating in regions other than China.
 
 让Android Auto显示任意应用, 基于VirtualDisplay的套娃方案, Star! Star! Star!
 
